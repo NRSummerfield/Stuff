@@ -7,7 +7,7 @@ setup(
     url="",
     author="Nicholas Summerfield",
     author_email="nsummerfield@wisc.edu",
-    packages=['Stuff', 'Stuff.Visualization', 'Stuff.PreProcessing'],
+    packages=['Stuff', 'Stuff.Visualization', 'Stuff.PreProcessing', 'Stuff.BBox'],
     install_requires=[
         "nibabel",
         "numpy",
