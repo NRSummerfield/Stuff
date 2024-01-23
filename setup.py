@@ -1,3 +1,4 @@
+import os, glob
 from setuptools import setup, find_packages
 
 setup(
@@ -7,7 +8,7 @@ setup(
     url="",
     author="Nicholas Summerfield",
     author_email="nsummerfield@wisc.edu",
-    packages=['Stuff', 'Stuff.Visualization', 'Stuff.PreProcessing', 'Stuff.BBox'],
+    packages=['Stuff', *[file for file in sorted(glob.glob(os.path.join('Stuff', '*'))) if os.path.isdir(file)]],
     install_requires=[
         "nibabel",
         "numpy",
